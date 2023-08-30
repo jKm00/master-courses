@@ -4,7 +4,7 @@ This is a collection of all work developed during my time with the programming l
 
 ## Book
 
-TBD
+[Concepts, Techniques and Models of Computer Programming, 1st Ed.](http://aleteya.cs.buap.mx/~jlavalle/papers/books_on_line/MIT.Press.Concepts.Techniques.and.Models.of.Computer.Programming.eBook-DDU.pdf)
 
 ## Structure
 
