@@ -9,3 +9,4 @@ TBD
 ## Structure
 
 - **Notes:** notes from lectures
+- **Workspace:** eclpise related work
