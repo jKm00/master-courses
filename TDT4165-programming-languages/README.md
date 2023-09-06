@@ -8,4 +8,6 @@ This is a collection of all work developed during my time with the programming l
 
 ## Structure
 
-TBD
+- **Notes:** notes from lectures
+- **Mozart:** tasks and programs related to mozart
+- **DC:** tbh
