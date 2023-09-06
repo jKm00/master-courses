@@ -1,0 +1,42 @@
+---
+Date: 05. Sept 2023
+Place: S2
+---
+
+# User Needs and Requirements
+
+- User needs is at the center of UCD
+
+_UCD: User centered designs_
+
+## What are user needs?
+
+- Identifying the current needs of users
+  - Goals: What does the user want to achieve?
+- Independent of any proposed solution
+- Identified through user interviews, obsercations, surveys, etc...
+
+### Example
+
+A presenter needs to know how much time is left to complete the presentation in time during a presentation with a fixed limit.
+
+- **Who is the user**: the presenter
+- **What is the user's need?** to know how much time is left
+- **What is the user's goal?** complete the presentation in time
+- **What is the context of use?** during a presentation iwth a fixed time limit
+
+## What are user requirements?
+
+- Derived from user needs
+- Describes what the user should be able to do with the design solution
+
+Not any technological specifics.
+
+### Example
+
+With a new system a presenter should be able to keep track of time spent during a presentation with a fixed time limit.
+
+### Two types of requirements
+
+1. Describes **what the user are enabled to do**
+2. Specify the inteded **outcome of user and associated quality criteria**
