@@ -8,4 +8,4 @@ TBD
 
 ## Structure
 
-TBD
+- **Notes:** notes from lectures
