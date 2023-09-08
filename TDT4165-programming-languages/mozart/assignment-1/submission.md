@@ -97,7 +97,7 @@ Circumference: 31.416
 # Task 6
 
 Code:
-```pz
+```oz
 fun {Factorial N}
     if N == 1 then
         N
