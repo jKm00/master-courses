@@ -3,38 +3,40 @@ import
     Application
     System
 define    
-    local List in
-        % Helper function
-        proc {PrintList List}
-            case List of Head|Tail then
-                {System.showInfo Head}
-                {PrintList Tail}
-            else
-                {System.showInfo "\n"}
-            end
-        end
+    % import list
+    \insert 'List.oz'
 
+    local List in
         % Defining the list
         List = [2 9 8 4 5]
         {System.showInfo "Original list:"}
-        {PrintList List}
-        
-        % a
-        fun {Length List}
-            case List of _|Tail then
-                1 + {Length Tail}
-            else
-                0
-            end
-        end
+        {System.show List}
 
+        % a results
         {System.showInfo "Task A results:"}
         {System.showInfo {Length List}}
 
-        % b
-        fun {Take List Count}
-            
-        end
+        % b results
+        {System.showInfo "Task B results:"}
+        {System.show {Take List 2}}
+
+        % c results
+        {System.showInfo "Task C results:"}
+        {System.show {Drop List 2}}
+        
+        % d results
+        {System.showInfo "Task D results:"}
+        {System.show {Append List List}}
+
+        % e results
+        {System.showInfo "Task E results:"}
+        {System.show {Member List 9}}
+        {System.show {Member List 6}}
+
+        % f results
+        {System.showInfo "Task F results:"}
+        {System.show {Position List 9}}
+        {System.show {Position List 4}}
 
     end
 
