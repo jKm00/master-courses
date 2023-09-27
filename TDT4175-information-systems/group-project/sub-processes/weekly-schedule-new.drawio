@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net" modified="2023-09-27T06:59:37.865Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="hnH_jQDnlolQfXVy5LCg" version="21.8.2" type="device">
+  <diagram name="Page-1" id="DJdL2kcr__wwFXiS8mvN">
+    <mxGraphModel dx="909" dy="611" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Llhk9cpAcjFQnYdJweaO-1" value="Student" style="swimlane;startSize=20;horizontal=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="710" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="Llhk9cpAcjFQnYdJweaO-2" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=standard;symbol=general;" vertex="1" parent="Llhk9cpAcjFQnYdJweaO-1">
+          <mxGeometry x="80" y="85" width="50" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="Student wants to check weekly schedule" placeholders="1" name="Variable" id="Llhk9cpAcjFQnYdJweaO-3">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="Llhk9cpAcjFQnYdJweaO-1">
+            <mxGeometry x="30" y="40" width="150" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="Llhk9cpAcjFQnYdJweaO-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=12 12;startArrow=oval;startFill=1;" edge="1" parent="Llhk9cpAcjFQnYdJweaO-1" source="Llhk9cpAcjFQnYdJweaO-14" target="Llhk9cpAcjFQnYdJweaO-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="250" as="targetPoint" />
+            <mxPoint x="270" y="280" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Llhk9cpAcjFQnYdJweaO-4" value="Go to blackboard calendar" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;" vertex="1" parent="Llhk9cpAcjFQnYdJweaO-1">
+          <mxGeometry x="210" y="70" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Llhk9cpAcjFQnYdJweaO-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Llhk9cpAcjFQnYdJweaO-1" source="Llhk9cpAcjFQnYdJweaO-2" target="Llhk9cpAcjFQnYdJweaO-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Llhk9cpAcjFQnYdJweaO-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Llhk9cpAcjFQnYdJweaO-1" source="Llhk9cpAcjFQnYdJweaO-6" target="Llhk9cpAcjFQnYdJweaO-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Llhk9cpAcjFQnYdJweaO-6" value="Plan week" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;" vertex="1" parent="Llhk9cpAcjFQnYdJweaO-1">
+          <mxGeometry x="420" y="70" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Llhk9cpAcjFQnYdJweaO-7" value="" style="points=[[0.145,0.145,0],[0.5,0,0],[0.855,0.145,0],[1,0.5,0],[0.855,0.855,0],[0.5,1,0],[0.145,0.855,0],[0,0.5,0]];shape=mxgraph.bpmn.event;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;align=center;perimeter=ellipsePerimeter;outlineConnect=0;aspect=fixed;outline=end;symbol=terminate2;" vertex="1" parent="Llhk9cpAcjFQnYdJweaO-1">
+          <mxGeometry x="620" y="85" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Llhk9cpAcjFQnYdJweaO-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="Llhk9cpAcjFQnYdJweaO-1" source="Llhk9cpAcjFQnYdJweaO-4" target="Llhk9cpAcjFQnYdJweaO-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Llhk9cpAcjFQnYdJweaO-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=12 12;startArrow=oval;startFill=1;" edge="1" parent="Llhk9cpAcjFQnYdJweaO-1" target="Llhk9cpAcjFQnYdJweaO-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="230" as="targetPoint" />
+            <mxPoint x="310" y="360" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="Lecture schedule and deadlines" placeholders="1" name="Variable" id="Llhk9cpAcjFQnYdJweaO-14">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="Llhk9cpAcjFQnYdJweaO-1">
+            <mxGeometry x="205" y="180" width="130" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="Llhk9cpAcjFQnYdJweaO-11" value="" style="swimlane;html=1;startSize=20;fontStyle=0;collapsible=0;horizontal=0;swimlaneLine=1;swimlaneFillColor=#ffffff;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="360" width="710" height="100" as="geometry" />
+        </mxCell>
+        <UserObject label="Blackboard" placeholders="1" name="Variable" id="Llhk9cpAcjFQnYdJweaO-12">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;rotation=-90;" vertex="1" parent="Llhk9cpAcjFQnYdJweaO-11">
+            <mxGeometry x="-30" y="40" width="80" height="20" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
