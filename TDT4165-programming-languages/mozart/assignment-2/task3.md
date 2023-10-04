@@ -12,23 +12,14 @@ Author: Joakim
 
 **Answer:**
 
-$
-V = \{c\}
-$
-
-$
-S = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 0, +, -, *, /\}
-$
-
-$
-R = \{(c, \epsilon), (c, 1c), (c, 2c), (c, 3c), (c, 4c), (c, 5c), (c, 6c), (c, 7c), (c, 8c), (c, 9c), (c, 0c), (c, +c), (c, -c), (c, *c), (c, /c)\} \\
-$
-
-$
+```
+V = {c}
+S = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, +, -, *, /}
+R = {(c, e), (c, 1c), (c, 2c), (c, 3c), (c, 4c), (c, 5c), (c, 6c), (c, 7c), (c, 8c), (c, 9c), (c, 0c), (c, +c), (c, -c), (c, *c), (c, /c)}
 v_s = c
-$
+```
 
-Where S matches any non-white-space character
+_Where e = epsilon_
 
 ### b)
 
@@ -36,23 +27,38 @@ Where S matches any non-white-space character
 
 **Answer:**
 
-$
-<c> ::== plus(<c>)
-$
-
+```
+<c> ::== e
+       | plus(<c>)
+       | minus(<c>)
+       | multiply(<c>)
+       | divide(<c>)
+       | 0<c>
+       | 1<c>
+       | 2<c>
+       | 3<c>
+       | 4<c>
+       | 5<c>
+       | 6<c>
+       | 7<c>
+       | 8<c>
+       | 9<c>
 ```
 
-```
-
-plus(7 minus(multiply(9 10) 3))
+_Where e = epsilon_
 
 ### c) 
 
-**Questiong:** Which kind of grammar is the grammar you defined in stap a)? Is it regular, context-free, context-sensitive, or unconstrained? What about the one from step b)?
+**Question:** Which kind of grammar is the grammar you defined in stap a)? Is it regular, context-free, context-sensitive, or unconstrained? What about the one from step b)?
 
 **Answer:**
 
-In task a) regular grammar is used. This is becuase the production rule follows the form of A -> a, where 'a' is only terminal symbols.
+Both of the grammars defined in a) and b) are regular, where all the rules follow one of these forms:
 
-In task b) 
+```
+v ::== s w
+v ::== s
+v ::== e
+```
 
+Where v, w are any non-terminal and s is any symbol S and e = epsilon.

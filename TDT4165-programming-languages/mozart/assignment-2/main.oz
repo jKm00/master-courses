@@ -190,14 +190,5 @@ define
     {System.showInfo "Output:"}
     {System.show {ExpressionTree {Tokenize {Lex "2 3 + 5 /"}}}}
 
-    % Task 3
-    % a) <lexem> ::== S (S Matches any non-white-space character)
-
-    % b)
-
-    % c) 
-    % In task a) regular grammar is used. This is becuase the production rule follows the 
-    % form of A -> a, where 'a' is only terminal symbols.
-
     {Application.exit 0}
 end
