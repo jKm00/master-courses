@@ -13,13 +13,15 @@ Author: Joakim
 **Answer:**
 
 ```
-V = {c}
+V = {c, b}
 S = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, +, -, *, /}
-R = {(c, e), (c, 1c), (c, 2c), (c, 3c), (c, 4c), (c, 5c), (c, 6c), (c, 7c), (c, 8c), (c, 9c), (c, 0c), (c, +c), (c, -c), (c, *c), (c, /c)}
-v_s = c
+R = {(c, e), (c, 1c), (c, 2c), (c, 3c), (c, 4c), (c, 5c), (c, 6c), (c, 7c), (c, 8c), (c, 9c), (c, 0c), (b, +), (b, -), (b, *), (b, /), (b, p), (b, d), (b, i), (b, c)}
+v_s = {c, b}
 ```
 
 _Where e = epsilon_
+
+For this, I have made the consumption that the input of the lexem function can only take in numbers and operators. Thats why I have defined these characters as the vocabulary of the grammar.
 
 ### b)
 
@@ -43,6 +45,7 @@ _Where e = epsilon_
        | 7<c>
        | 8<c>
        | 9<c>
+       | 0
 ```
 
 _Where e = epsilon_
