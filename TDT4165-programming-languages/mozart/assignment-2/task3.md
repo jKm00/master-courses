@@ -21,8 +21,6 @@ v_s = {c, b}
 
 _Where e = epsilon_
 
-For this, I have made the consumption that the input of the lexem function can only take in numbers and operators. Thats why I have defined these characters as the vocabulary of the grammar.
-
 ### b)
 
 **Question:** Describe the grammar of the records return by the 'ExpressionTree' function in Task 2, using (E)BNF
