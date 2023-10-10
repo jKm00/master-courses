@@ -43,7 +43,6 @@ _Where e = epsilon_
        | 7<c>
        | 8<c>
        | 9<c>
-       | 0
 ```
 
 _Where e = epsilon_
