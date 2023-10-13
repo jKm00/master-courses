@@ -26,6 +26,20 @@ The success for this project should be measured by:
 
 # Deliverable
 
+The final deliverable should consits of a system that can be used by healthcare personel. The system will get relevant patient data from the personel and/or from already existings records for the patients. The core of the system is the machine learning model, that use this data to predict the likelihood of heart failure.
+
+The system should be easily accessible by the healthcare personel via a friendly user interface. The interface should allow them to input data and also access data from integrated sources.
+
+The model will calcuate the patient's risk of heart failure. It should provide a risck score which can be used to categorize the patient into low, moderate, or high-risk groups.
+
+For ongoing patient care, the system can be used for continuous monitoring, allowing the personel to add additional data along the way.
+
+The system should generate detailed reports on each patient's risk assessment. These reports should be stored securely for future reference and should be accessable by the personel only via the user interface.
+
 
 
 # Constraints
+
+# Sources:
+
+https://www.v7labs.com/blog/f1-score-guide#what-is-f1-score
