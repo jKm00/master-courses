@@ -86,28 +86,34 @@ define
     
     % a)
     fun {Enumerate Start End}
-        thread
-            if Start =< End then
+        if Start =< End then
+            thread
                 Start|{Enumerate Start + 1 End}
-            else
-                nil
             end
+        else
+            nil
         end
     end
 
+    {System.showInfo "Input: {Enumerate 1 5}\n"}
+    {System.showInfo "Output: "}
     {ShowStream {Enumerate 1 5}}
 
     {System.showInfo "\n***** Task 2b) *****\n"}
-
+    
     % b)
     fun {GenerateOdd Start End} Stream in
         if Start =< End then
             Stream = {Enumerate Start End}
             case Stream of Head|_ then
                 if {Int.isOdd Head} then
-                    Head|{GenerateOdd Head + 1 End}
+                    thread
+                        Head|{GenerateOdd Head + 1 End}
+                    end
                 else
-                    {GenerateOdd Head + 1 End}
+                    thread
+                        {GenerateOdd Head + 1 End}
+                    end
                 end
             else
                 nil
@@ -116,29 +122,77 @@ define
             nil
         end
     end
-
+    
+    {System.showInfo "Input: {GenerateOdd 1 5}\n"}
+    {System.showInfo "Output: "}
     {ShowStream {GenerateOdd 1 5}}
+
+    {Delay 100}
 
     % ######## Task 3 ########
 
+    {System.showInfo "\n***** Task 3a) *****\n"}
+
     % a)
     fun {ListDivisorsOf Number} Possibilities in
-        {ListDivisorsOfHelper Number 1}
+        Possibilities = {Enumerate 1 Number}
+        {ListDivisorsOfHelper Number Possibilities}
     end
 
-    fun {ListDivisorsOfHelper Number Current}
-        if Current =< Number then
-            if {Int.mod Current Number} == 0 then
-                Current|{ListDivisorsOfHelper Number Current + 1}
+    fun {ListDivisorsOfHelper Number Possibilities}
+        case Possibilities of Head|Tail then
+            if Number mod Head == 0 then
+                thread
+                    Head|{ListDivisorsOfHelper Number Tail}
+                end
             else
-                {ListDivisorsOfHelper Number Current + 1}
+                thread
+                    {ListDivisorsOfHelper Number Tail}
+                end
             end
         else
             nil
         end
     end
 
-    {System.show {ListDivisorsOf 5}}
+    {System.showInfo "Input: {ListDivisorsOf 5}\n"}
+    {System.showInfo "Output: "}
+    {ShowStream {ListDivisorsOf 5}}
+
+    {Delay 100}
+
+    {System.showInfo "\n***** Task 3b) *****\n"}
+
+    % b)
+    fun {ListPrimeUntil N} Stream in
+        Stream = {Enumerate 1 N}
+        {ListPrimeUntilHelper Stream}
+    end
+
+    fun {ListPrimeUntilHelper Stream} Length in
+        case Stream of Head|Tail then
+            Length = {List.length {ListDivisorsOf Head}}
+            if Length == 1 then
+                thread
+                    Head|{ListPrimeUntilHelper Tail}
+                end
+            elseif Length == 2 then
+                thread
+                    Head|{ListPrimeUntilHelper Tail}
+                end
+            else
+                thread
+                    {ListPrimeUntilHelper Tail}
+                end
+            end
+        else
+            nil
+        end
+    end
+
+    {System.showInfo "Input: {ListPrimeUntil 10}\n"}
+    {System.showInfo "Output: "}
+    {ShowStream {ListPrimeUntil 10}}
 
     {Application.exit 0}
 end
