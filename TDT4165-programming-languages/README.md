@@ -1,6 +1,6 @@
 # Programming Languages
 
-This is a collection of all work developed during my time with the programming languages course.
+This is a collection of all the work developed during my time with the programming languages course.
 
 ## Book
 
@@ -9,5 +9,5 @@ This is a collection of all work developed during my time with the programming l
 ## Structure
 
 - **Notes:** notes from lectures
-- **Mozart:** tasks and programs related to mozart
+- **Mozart:** tasks and programs related to Mozart
 - **DC:** tbh
