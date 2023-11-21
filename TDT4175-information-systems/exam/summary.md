@@ -43,5 +43,5 @@ Set of hardware, software, databases, people, and procedures that ar configured 
 
 ### Group Decision Support System (GDSS)
 
-- Offers way to exchange ideas and decisions anonymously.
-  - Anonymouse so everyone can contribute without be ing afraid.
+- Offers a way to exchange ideas and decisions anonymously.
+  - Anonymous so everyone can contribute without being afraid.
