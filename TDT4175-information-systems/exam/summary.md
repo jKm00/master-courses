@@ -12,7 +12,7 @@ Information systems are interrelated components working together to collect, pro
 
 ## Computer Bases IS
 
-Set of hardware, software, databases, people, and procedures that ar configured to collect, manipulate, store, and process data information.
+Set of hardware, software, databases, people, and procedures that are configured to collect, manipulate, store, and process data information.
 
 ### Data, Information, Knowledge
 
