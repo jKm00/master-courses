@@ -30,7 +30,7 @@ Set of hardware, software, databases, people, and procedures that are configured
 ### Decision Support System (DSS)
 
 - Organized collections of people, procedures, software, databases, and devices used to help make decisions and solve problems.
-- Focus on supporting decisions regarding semistructured and unstructured business problems.
+- Focus on supporting decisions regarding **semistructured** and **unstructured** business problems.
 - Can give insight into how they made their decisions (explicit), or not (implicit)
 
 ### Knowledge Management System (KMS)
@@ -55,6 +55,30 @@ Godamn -> CADEM -> CAD, CAE, CAM -> Computer Aided Design / Engeineering / Manuf
 ### Enterprise Resource Planning (ERP)
 
 - A set of integrated programs that manage a company's vital business operations for an entire organization
+
+## Enterprise Architecture (EA)
+
+A conceptual model that describes how a business is constructed.
+
+### TOGAF
+
+An EA framework that helps define business goals and align them with architecture objectives around enterprise software development.
+
+#### Business Architecture
+
+Capturing how a business operates
+
+#### Application Architecture
+
+Defines the software solutions that help the business to do its job and adapt to change.
+
+#### Data Architecture
+
+Models the sources, formats, management, quality, etc... of the data required for the business.
+
+#### Technology Architecture
+
+Models the hardware and infrastructure needed to support all of the above.
 
 ## E-Commerces
 
