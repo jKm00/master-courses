@@ -60,7 +60,7 @@ Godamn -> CADEM -> CAD, CAE, CAM -> Computer Aided Design / Engeineering / Manuf
 
 A conceptual model that describes how a business is constructed.
 
-### TOGAF
+### The Open Group Architecture Framework (TOGAF)
 
 An EA framework that helps define business goals and align them with architecture objectives around enterprise software development.
 
