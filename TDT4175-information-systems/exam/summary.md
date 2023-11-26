@@ -63,3 +63,10 @@ Godamn -> CADEM -> CAD, CAE, CAM -> Computer Aided Design / Engeineering / Manuf
 - **c2c:** finn.no
 - **g2c:** nav
 - **g2b:** skatteetatten
+
+# Miles and Snow's Strategy
+
+- **Prospector:** Innovator, searches for new markets, risk-taking (Google, Amazone)
+- **Defender:** Protects current market
+- **Analyzer:** Maintains current market, moderate emphasis on innovation (Yahoo, UBER)
+- **Reactor:** No clear strategy, reacts to changes (NOKIA)
