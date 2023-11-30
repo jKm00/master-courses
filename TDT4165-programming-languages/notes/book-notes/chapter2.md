@@ -273,4 +273,17 @@ Two phases:
 
 Most garbage collectors are idle until a predefined threshold of memory usage is met. Then the garbage collector runs, halting the program until it's done. There are garbage collectors that can run continuously, interleaved with the program execution.
 
+## From Kernel Language to Practical Language
+
+Kernel language is too minimal. Syntactic sugar and linguistic abstracions can be added to make it more complete.
+
+### Expression
+
+A sequence of operations that returns a value
+
+```
+11*11       # This is an expression
+X = 11*11   # This is a statement that uses the expression above
+```
+
 [//]: # 'p. 108'
