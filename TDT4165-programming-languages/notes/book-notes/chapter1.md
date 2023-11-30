@@ -4,7 +4,7 @@ Author: Joakim
 
 # Chapter 1 - Introduction to Programming Concepts
 
-## Correctnes
+## Correctness
 
 How to tell if a program is correct? Three steps:
 
@@ -14,7 +14,7 @@ How to tell if a program is correct? Three steps:
 
 ### Mathematical induction
 
-One way of proving a program with a mathematical technique.
+One way of proving a program is with a mathematical technique.
 
 Two steps:
 
@@ -33,14 +33,13 @@ fun lazy {Ints N}
 end
 ```
 
-Functions will create the infinite list [0, 1, 2, ... ]. Looks like an infinite loop, but printing it out resutls in:
+Functions will create the infinite list `[0, 1, 2, ...]`. Looks like an infinite loop, but printing it out results in:
 
 ```
 L<Future>
 ```
 
-Printing a specfic index will cause the function to calculate the values up to the index you are printing.
-
+Printing a specific index will cause the function to calculate the values up to the index you are printing.
 
 ## Higher-order programming
 
@@ -48,7 +47,7 @@ The ability to pass functions as arguments is known as higher-order programming.
 
 ## Concurrency
 
-Program that has several independent activities, each executed at its own pace. Concurrency is achieved with the implementation of threads.
+A program that has several independent activities, each executed at its own pace. Concurrency is achieved with the implementation of threads.
 
 ## Dataflow
 
@@ -56,21 +55,21 @@ What happens if an operation tries to use a variable that is not yet bound? With
 
 ## Explicit state
 
-The ability for a function to store some internal values which helps it do its job. For example, make a function keep track of how many times it has been called.
+The ability of a function to store some internal values which helps it do its job. For example, make a function keep track of how many times it has been called.
 
 ## Objects
 
-A function with internal memory is usually called an object. With objects we can encapsulate data so no external can modify it without using functions provided by the object.
+A function with internal memory is usually called an object. With objects, we can encapsulate data so no external can modify it without using functions provided by the object.
 
 ## Classes
 
-Classes can be viewed as a factory for object. You define what the object should look like and can instantiate objects from the definition (from the class).
+Classes can be viewed as a factory for objects. You define what the object should look like and can instantiate objects from the definition (from the class).
 
 ## Nondeterminism and time
 
-Applying state and concurrency to a program is tricky as the order in which threads access the state can change from execution to execution, giving the same program differnet result. This is called _nondeterminism_.
+Applying state and concurrency to a program is tricky as the order in which threads access the state can change from execution to execution, giving the same program a different result. This is called _non-determinism_.
 
-Nondeterminism by itself is not a problem. The difficulties occur if it shows  up in a program, if it is observable (called a race condition).
+Nondeterminism by itself is not a problem. The difficulties occur if it shows up in a program if it is observable (called a race condition).
 
 ### Example:
 
@@ -85,17 +84,17 @@ thread
 end
 ```
 
-What is the content of C after the exeecution of this program?
+What is the content of C after the execution of this program?
 
 ### Interleaving
 
-Threads execution is interleaving, meaning they take turns to execute a little at the time.
+Threads execution is interleaving, meaning they take turns to execute a little at a time.
 
 **Note:** If possible, do not use state and concurrency together.
 
 ## Atomicity
 
-An operation is _atmoic_ if no intermediate states can be observed. To make sure an operation is atmoic, we can use a lock. A lock has an "inside" and an "outside" and only one thread can operation on the "inside" at a time. If a second thread tries to get in, it has to wait for the first thread to finish and leave.
+An operation is _atomic_ if no intermediate states can be observed. To make sure an operation is atomic, we can use a lock. A lock has an "inside" and an "outside" and only one thread can operate on the "inside" at a time. If a second thread tries to get in, it has to wait for the first thread to finish and leave.
 
 ### Example:
 
@@ -116,4 +115,3 @@ thread
     end
 end
 ```
-
