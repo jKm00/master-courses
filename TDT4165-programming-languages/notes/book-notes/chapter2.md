@@ -154,7 +154,7 @@ Five different ways of handling use errors:
 2. Execution continues and no error is given. The variable is initialized to a default value. (Java)
 3. Execution stops with an error. (Prolog)
 4. Execution is not possible as the compiler detects that there is an execution path to the variable's use that does not initialize. (Java for local variables).
-5. Execution waits until the variable is bound then continues. (Oz)
+5. Execution waits until the variable is bound and then continues. (Oz)
 
 The last one is good for concurrent systems, as a normal operation in another thread can bind the variables. However, it can cause **suspension** that waits forever, for example, if a variable name is misspelled and is never bound.
 
@@ -177,4 +177,100 @@ Symbolic languages are languages that provide high-level support for records. Ma
 
 ## Kernel Language Semantics
 
-[//]: # 'p. 87'
+### Basic Concepts
+
+#### Procedures
+
+```
+proc {Max X Y Z}
+    if X >= Y then Z = X else Z = Y end
+end
+
+{Max 3 5 C}
+```
+
+The code above will bind `C` to the maximum value of `X` vs `Y` (`5`). When the call to `Max` is made, the `X`, `Y`, and `Z` are bound to `3`, `5`, and the unbound variable referenced by `C`. When `Max` binds `Z`, then it binds this variable. Since `C` also references this variable, this also binds `C`. This is called **call by reference**.
+
+#### Static scoping
+
+The variable corresponding to an identifier occurrence is the one defined in the textually innermost declaration surrounding the occurrence in the source program.
+
+```
+local Y LB in
+    Y = 10
+    proc {LB X Z}
+        if X >= Y then Z = X else Z =Y
+    end
+    local Y = 16 Z in
+        {LB 5 Z}
+    end
+end
+```
+
+_Z would be bound to 10_
+
+#### Dynamic scoping
+
+The variable corresponding to an identifier occurrence is the one in the most recent declaration seen during the execution leading up to the current statement.
+
+```
+local P Q in
+    proc {Q X} {Browse stat(X)} end
+    prox {P X} {Q X} end
+    local Q in
+        proc {Q X} {Browse dyn(X)} end
+        {P hello}
+    end
+end
+```
+
+_With dynamic scoping `dyn(hello)` would be the output as the call to `P` would use the most recent value of `Q`_
+
+#### Static vs Dynamic Scoping
+
+Static is the most safe option as the procedure that works when it is defined will always work.
+
+### The Abstract Machine
+
+Define the semantics of the kernel language with the use of an abstract machine. Need to define the basic concepts of the machine:
+
+#### Definitions
+
+- A `single-assignment store σ` is a set of store variables.
+- An `environment E` is a mapping from variable identifiers to entities in a store (`σ`). Write `E` as a set of pairs, `{X -> x, Y -> y}`
+- A `semantic statement` is a pair `(<S>, E)` where `<S>` is a statement and `E` is an environment.
+- An `execution state` is a pair `(ST, σ)` where `ST` is a stack of semantic statements and `σ` is a single-assignment store.
+- A `computation` is a sequence of execution states starting from an initial state: `(ST_0, σ_0) -> (ST_1, σ_1) -> (ST_2, σ_2) -> ...`
+
+## Memory Management
+
+### Tail-Recursive Calls
+
+- Recursive functions with one recursive call which is the last call in the procedure body.
+- The semantic stack is bounded by a constant size.
+- The store grows for each call. (Not a problem as the semantic stack only needs the last entry in the store, meaning we can remove the not-needed variables)
+
+### Memory Life Cycle
+
+A running program needs only the semantic stack and the variables in the stores that are reachable from the semantic stack. Together these are called the active memory.
+
+Memory is divided into blocks. These can be in three different stages and cycle through them during the execution of a program:
+
+- **Active:** Memory that is currently used by the program
+- **Inactive:** Memory that is no longer reachable by the program
+- **Free:** Memory that is free to be claimed
+
+The problem is to understand when memory is **inactive** so it can be made **free** again (C and C++ make this the developer's responsibility).
+
+### Garbage Collection
+
+Reclaiming of **inactive** memory is done by the system (e.g. Java).
+
+Two phases:
+
+1. Determines what active memory is. (Finds all data structures reachable from an initial set of pointers (the root set))
+2. Collects the active memory into one contiguous block and the free memory blocks into one contiguous block.
+
+Most garbage collectors are idle until a predefined threshold of memory usage is met. Then the garbage collector runs, halting the program until it's done. There are garbage collectors that can run continuously, interleaved with the program execution.
+
+[//]: # 'p. 108'
