@@ -286,4 +286,12 @@ A sequence of operations that returns a value
 X = 11*11   # This is a statement that uses the expression above
 ```
 
-[//]: # 'p. 108'
+## Functions
+
+- First linguistic abstraction.
+- Uses the `fun` keywords
+- Body must end with an expression
+
+## Exceptions
+
+Using a `try` statement creates a new exceptionn-catching context. Any `raise` statement will pop the rest of the statement from the stack and the closest exception context catches it.
