@@ -275,7 +275,7 @@ Most garbage collectors are idle until a predefined threshold of memory usage is
 
 ## From Kernel Language to Practical Language
 
-Kernel language is too minimal. Syntactic sugar and linguistic abstracions can be added to make it more complete.
+Kernel language is too minimal. Syntactic sugar and linguistic abstractions can be added to make it more complete.
 
 ### Expression
 
@@ -290,8 +290,8 @@ X = 11*11   # This is a statement that uses the expression above
 
 - First linguistic abstraction.
 - Uses the `fun` keywords
-- Body must end with an expression
+- The body must end with an expression
 
 ## Exceptions
 
-Using a `try` statement creates a new exceptionn-catching context. Any `raise` statement will pop the rest of the statement from the stack and the closest exception context catches it.
+Using a `try` statement creates a new exception-catching context. Any `raise` statement will pop the rest of the statement from the stack and the closest exception context catches it.

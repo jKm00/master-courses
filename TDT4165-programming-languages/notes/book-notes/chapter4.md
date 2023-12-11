@@ -6,17 +6,17 @@ Author: Joakim
 
 ### Eager Streams
 
-- Streams that produces elements as fast as it wants.
-- Drawback: if it produces elements faster than the consumer can consume them, it leads to explosion in resource usage.
+- Streams that produce elements as fast as they want.
+- Drawback: if it produces elements faster than the consumer can consume them, it leads to an explosion in resource usage.
 
 ### Lazy Streams
 
-- Streams that produces elements on demand from the consumer.
+- Streams that produce elements on demand from the consumer.
 - Drawback: reduces throughtput as the consumer has to request a new element, then wait for the consumer to provide it
 
 ### Bounded Buffer
 
-- Best of both worlds: Put a transducer in between the producer and the consumer that acts as a buffer. The buffer can store a maximum of `n` elements. When the consumer needs a new element, it reeds it from the buffer. Whenever the buffer is below `n` elements, the producer is allowed to produce more elemet.s
+- The best of both worlds: Put a transducer in between the producer and the consumer that acts as a buffer. The buffer can store a maximum of `n` elements. When the consumer needs a new element, it reeds it from the buffer. Whenever the buffer is below `n` elements, the producer is allowed to produce more elements.
 
 #### Transducer
 
@@ -39,6 +39,6 @@ C = {F3 30}
 D = A + B
 ```
 
-`A` and `B` are calculated when we need `D`, `C` is never calcualated as we never need it.
+`A` and `B` are calculated when we need `D`. `C` is never calculated as we never need it.
 
 [//]: # 'p. 311'
