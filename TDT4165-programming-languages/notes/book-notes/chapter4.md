@@ -40,5 +40,3 @@ D = A + B
 ```
 
 `A` and `B` are calculated when we need `D`. `C` is never calculated as we never need it.
-
-[//]: # 'p. 311'
