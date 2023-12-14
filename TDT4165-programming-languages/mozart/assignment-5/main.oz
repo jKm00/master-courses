@@ -40,7 +40,7 @@ define
     % For the code above, the first thread is scheduled before the second thread. This is why A is printed before B.
     % The threads are executed in parallel. This is why A and B are printed before A * 10 and B * 10
 
-    {Delay 100}
+    {Delay 200}
 
     {System.showInfo "\n***** Task 1c) *****\n"}
 
