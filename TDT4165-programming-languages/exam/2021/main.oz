@@ -23,9 +23,9 @@ define
     % 2.
     local Tree1 Tree2 Tree3 in
 
-        Tree1 = {Insert 1 "one" nil}
-        Tree2 = {Insert 2 "two" Tree1}
-        Tree3 = {Insert 3 "three" Tree2}
+        {Insert 1 "one" nil Tree1}
+        {Insert 2 "two" Tree1 Tree2}
+        {Insert 3 "three" Tree2 Tree3}
 
         {System.show Tree3}
 
@@ -63,4 +63,15 @@ define
     {System.show {ProcLength [1 2 3]}}
 
     {Application.exit 0}
+end
+
+fun {Swap X Y}
+    Y|X
+end
+
+fun (ReverseD DL)
+    case DL of nil then nil
+    [] Head|Tail then
+        {Swap Head {ReverseD Tail}}
+    end
 end
