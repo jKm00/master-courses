@@ -8,4 +8,7 @@ TBD
 
 ## Structure
 
-- **Notes:** notes from lectures
+- **Notes:** Notes from lectures
+- **Tasks:** Assignments in the course
+- **Group project:** Diagrams developed during the group project.
+- **Exam:** Notes and summary as preparation for the exam.

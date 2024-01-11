@@ -8,6 +8,9 @@ This is a collection of all the work developed during my time with the programmi
 
 ## Structure
 
-- **Notes:** notes from lectures
-- **Mozart:** tasks and programs related to Mozart
-- **DC:** tbh
+- **Notes:**
+  - **Book notes:** Notes from the book
+  - **Lecture Notes:** Notes from the lectures
+- **Mozart:** Tasks, assignments, and programs related to Mozart
+- **DC:** A simple DC example
+- **Exam:** Task from previous exams.
