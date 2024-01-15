@@ -4,7 +4,7 @@ This is a collection of all the work developed during my time with this course.
 
 ## Book
 
-TBD
+Cryptography and Network Security, William Stallings, 8th Edition
 
 ## Structure
 
