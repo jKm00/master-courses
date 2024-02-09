@@ -53,21 +53,6 @@ def calculate_key(p, c):
     
     return k
 
-def print_keys(p, bigram_candidates):
-    """Prints the keys for all possible ciphertexts given a plaintext matrix and a list of ciphertext matrices."""
-    index = 0
-    for c_0 in bigram_candidates:
-        for c_1 in bigram_candidates:
-            if c_0 == c_1:
-                continue
-            c = Matrix([
-                [c_0[0], c_1[0]],
-                [c_0[1], c_1[1]]
-            ])
-            key = calculate_key(p, c)
-            print(f'K_{index + 1}: {key}')
-            index += 1
-
 def run(file_path, p, bigram_candidates):
     # Read file
     with open(file_path, 'r') as file:
@@ -81,6 +66,16 @@ def run(file_path, p, bigram_candidates):
         print()
 
     # Calculate keys
-    print_keys(p, bigram_candidates)
+    index = 0
+    for c_0 in bigram_candidates:
+        for c_1 in bigram_candidates:
+            if c_0 == c_1:
+                continue
+            c = Matrix([
+                [c_0[0], c_1[0]],
+                [c_0[1], c_1[1]]
+            ])
+            print(f'K_{index + 1}: {calculate_key(p, c)}')
+            index += 1
 
 run(file_path, p, bigram_candidates)
