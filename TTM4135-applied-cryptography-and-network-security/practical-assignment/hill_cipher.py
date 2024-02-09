@@ -1,5 +1,26 @@
 from sympy import Matrix
-import sys
+
+#########################################
+# Configure file path, plaintext matrix #
+# and all possible ciphertexts          #
+#########################################
+
+file_path = 'ciphertexts/0.txt'
+p = Matrix([
+    ['T', 'H'],
+    ['H', 'E']
+])
+# An array of all possible bigram candidates for `TH` and `HE`
+bigram_candidates = [
+    ['A', 'I'],
+    ['X', 'Z'],
+    ['J', 'H']
+]
+print_ciphertext = True
+
+#########################################
+# Don't change anything below this line #
+#########################################
 
 # Define alphabet and dictionaries for converting characters to numbers and vice versa
 alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012'
@@ -32,69 +53,34 @@ def calculate_key(p, c):
     
     return k
 
-def print_keys(p, c_possibilities):
+def print_keys(p, bigram_candidates):
     """Prints the keys for all possible ciphertexts given a plaintext matrix and a list of ciphertext matrices."""
-    for index, c in enumerate(c_possibilities):
-        key = calculate_key(p, c)
-        print(f'K_{index + 1}: {key}')
+    index = 0
+    for c_0 in bigram_candidates:
+        for c_1 in bigram_candidates:
+            if c_0 == c_1:
+                continue
+            c = Matrix([
+                [c_0[0], c_1[0]],
+                [c_0[1], c_1[1]]
+            ])
+            key = calculate_key(p, c)
+            print(f'K_{index + 1}: {key}')
+            index += 1
 
-def run(file_path, p, c_possibilities):
+def run(file_path, p, bigram_candidates):
     # Read file
     with open(file_path, 'r') as file:
         ciphertext = file.read().strip()
         converted_ciphertext = ciphertext.replace(',', '0').replace('.', '1').replace('-', '2')
 
-    # Print ciphertext (use --p flag to print)
-    print_ciphertext = '--p' in sys.argv
+    # Print ciphertext
     if print_ciphertext:
         print('Converted ciphertext:')
         print(converted_ciphertext)
         print()
 
     # Calculate keys
-    print_keys(p, c_possibilities)
+    print_keys(p, bigram_candidates)
 
-#########################################
-# Configure file path, plaintext matrix #
-# and all possible ciphertexts          #
-#########################################
-
-# Text file
-file_path = 'ciphertexts/0.txt'
-
-# Most common bigrams in English
-p = Matrix([
-    ['T', 'H'],
-    ['H', 'E']
-])
-
-# All possible ciphertexts for the given plaintext 
-# (derived from frequency analysis on the ciphertext)
-c_possibilities = [
-    Matrix([
-        ['A', 'X'],
-        ['I', 'Z']
-    ]),
-    Matrix([
-        ['A', 'J'],
-        ['I', 'H']
-    ]),
-    Matrix([
-        ['X', 'A'],
-        ['Z', 'I']
-    ]),
-    Matrix([
-        ['X', 'J'],
-        ['Z', 'H']
-    ]),
-    Matrix([
-        ['J', 'A'],
-        ['H', 'I']
-    ]),
-    Matrix([
-        ['J', 'X'],
-        ['H', 'Z']
-    ])
-]
-
-run(file_path, p, c_possibilities)
+run(file_path, p, bigram_candidates)
