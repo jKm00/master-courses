@@ -65,7 +65,7 @@ def run(file_path, p, bigram_candidates):
         print(converted_ciphertext)
         print()
 
-    # Calculate keys
+    # Print all possible keys
     index = 0
     for c_0 in bigram_candidates:
         for c_1 in bigram_candidates:
