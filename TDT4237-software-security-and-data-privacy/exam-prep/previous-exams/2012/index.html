@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>XSS URL Example</title>
+	</head>
+	<body>
+		<div>
+			<p>Search resultes for: <span id="search-word"></span></p>
+			<ul>
+				<li>Result 1</li>
+				<li>Result 2</li>
+				<li>Result 3</li>
+			</ul>
+		</div>
+
+		<script defer>
+			const output = document.querySelector('#search-word');
+
+			document.addEventListener('DOMContentLoaded', () => {
+				urlParams = new URLSearchParams(window.location.search);
+
+				output.innerHTML = urlParams.get('search');
+			});
+		</script>
+	</body>
+</html>
