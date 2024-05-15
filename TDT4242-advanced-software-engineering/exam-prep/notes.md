@@ -5,9 +5,9 @@ author: Joakim
 
 # Exam Prep Notes
 
-## Explain differente requirement elication and documentation approaches
+## Explain different requirement elication and documentation approaches
 
-### RSL (requirement specificaiton languages)
+### RSL (requirement specification languages)
 
 #### Guided natural language
 
@@ -20,7 +20,7 @@ author: Joakim
 #### Boilerplate-based RSL
 
 - The _system name_ shall _function_ _object_ every _performance_ _units_
-- The _coffe machine_ sall _produce_ _a hot dring_ every _10_ _seconds_
+- The _coffee machine_ shall _produce_ _a hot dring_ every _10_ _seconds_
 
 ##### User storis
 
@@ -223,8 +223,102 @@ BankA has a credit limit between \$4_000 to \$40_000.
 
 ## Create different system test cases
 
+## Explain different categories of acceptance test case
+
+- Confirm that the system meets the agreed acceptance criteria
+
+- User acceptance testing: Functions are correct?
+  - system requirements, business requirements, use cases, etc...
+- Operational testing: Ready to operate?
+  - Backups
+  - Procedures for disaster recovery
+  - Training/manual for end-user
+  - Maintenance manuel/procedures
+  - Security procedures
+- Contract and regulation acceptance testing: Test against regulration
+  - Government regulation
+  - Legal standards
+  - Safety standards
+- Alpha and beta testing:
+  - Alpha: At developer, by internal staff, before release
+  - Beta: At customer, before release to other customer
+
 ## Explain different test prioritzation approaches
 
 ## Explain regression test selection approaches
 
 ## Explain different regression tet minimization and prioritization strategies
+
+### Prioritization
+
+- Ranking tests on some criteria
+- Goal og revealing critical faults early
+
+#### Strategies
+
+- Coverage based (high coverage)
+- Cost-aware based (low cost to run, high fault-finding probability)
+
+## Explain why code inspection and testing complete each other
+
+- Testing does not find all defects in a code. Code review usually finds different defects then what the test does.
+- Test can not find code smells, where as code review can.
+- Tests can only be implemented in the code, where as review can be used in other areas such as documentation.
+- Reviews can a team share knowledge and best practises
+- Tests are only a spot check, where as a reviewer can see the bigger picture
+
+## Understand different types of code smell
+
+### Bloaters
+
+- Large method/classes that are hard to work with
+- Long parameter list -> Introduce parameter object
+- Primitive obsession: Code relies too much on primitives
+- Data clumps: Bunches of data often hang together
+
+### Object-oriented Abusers
+
+- Alternative classes with different interfaces: Two classes are similar on the inside but are different on the outside (method names and signatures)
+- Refused bequest: Wrong hiearchy (e.g. chair is not an animal just because it has legs)
+- Switch statement: Over use of switch statements
+- Temporary fields: Classes have variables that are only used in some situations
+
+### Change Preventers
+
+- Divergent Change: One module is often changed in different ways for different reasons, violation of single responsibility
+- Shotgun surgery: Single change is made to multiple classes simultaneously.
+- Parallel inheritance hierarchies: When creating a sub-class for a class, you need to create a sub-class for another class
+
+### Dispensables
+
+- Comments: Can quickly get outdated
+- Data class: A class primarly contains data fields with no behaviour
+- Laze class: A class that isn't enough to pay for itself should be eliminated
+- Duplicated code: DRY
+- Dead code: Code that is no longer in use
+- Speculative generality: Code that isn't needed today (might be needed in the future)
+
+### Couplers
+
+- Feature envy: A function in one module spends more time communicating with other modules than it does within its own
+- Inappropriate intimacy: Two classes that are tightly linked to each other
+- Message chains/Middle man: A class/method in the middle that doesn't do anything other than to forward it
+
+## Explain unsystematic vs systematic reading techniques
+
+- Unsystematic review is where you read to the changes as you like
+- Semi-Systematic is where you have a checklist that you go through to make sure all the point are met
+- Systematic
+  - Defect reading: each reader is given a responsibility to discover a particular class of defects
+  - Perspective-based reading: each reader reviews changes from a specific point of view (end-user, designer, tester)
+
+## Explain the purpose and steps of code refactor
+
+- Goal: Change the internal structure without changing the external behavior
+- Used to eliminate code smells
+
+### Steps
+
+1. Implement solid test cases to make sure refactoring changes does not change the behavior of the system
+2. Review code to identiy smelly code
+3. Refactor the identified smelly code blocks and re-run tests (one step at a time)
