@@ -145,7 +145,7 @@ BankA has a credit limit between \$4_000 to \$40_000.
   - Random attack inputs
   - injection attacks
 
-### Random testing for convurrent programs
+### Random testing for concurrent programs
 
 - The sequences of thread execution is undeterministic
 - Introduce `sleep()` to check for different scheduling, does the system still work?
