@@ -245,14 +245,18 @@ BankA has a credit limit between \$4_000 to \$40_000.
 
 ## Explain different test prioritzation approaches
 
+TODO:
+
 ## Explain regression test selection approaches
+
+TODO:
 
 ## Explain different regression tet minimization and prioritization strategies
 
 ### Prioritization
 
 - Ranking tests on some criteria
-- Goal og revealing critical faults early
+- Goal of revealing critical faults early
 
 #### Strategies
 
@@ -264,7 +268,7 @@ BankA has a credit limit between \$4_000 to \$40_000.
 - Testing does not find all defects in a code. Code review usually finds different defects then what the test does.
 - Test can not find code smells, where as code review can.
 - Tests can only be implemented in the code, where as review can be used in other areas such as documentation.
-- Reviews can a team share knowledge and best practises
+- Reviews can help a team share knowledge and best practises
 - Tests are only a spot check, where as a reviewer can see the bigger picture
 
 ## Understand different types of code smell
@@ -322,3 +326,111 @@ BankA has a credit limit between \$4_000 to \$40_000.
 1. Implement solid test cases to make sure refactoring changes does not change the behavior of the system
 2. Review code to identiy smelly code
 3. Refactor the identified smelly code blocks and re-run tests (one step at a time)
+
+## Understand the trade-off of using different software engineering practices in different application odmain and project contexts
+
+TODO:
+
+## Explain importance and challenges in software sustainability
+
+- Physical: Infrastructure and hardware is physical -> uses a lot of energy -> manufactorung/shipping, power/cooling
+- Social threats: human rights violations, digital inequalities, mental health issues, democracy, privacy, freedom, and peace
+
+## Describe different aspects of software sustainability
+
+- Social: effects the system have on society
+- Economic: create software so that stakeholders long-term investments are safe from economic risks
+- Individual: create software so that developers are satisfied with their job over longer periods
+- Technical: make software that can adapt to future changes
+- Environmental: how software impacts envoronent during development, usage and maintanence
+
+## Explain the elements that influence software scalability
+
+- Processing capacity (load):
+  - CPU: instructions per seconds
+  - Database: transactions per seconds
+  - Network: bits per second
+- Information capacity (work):
+  - Sizes of caches
+  - Size of primary & secondary memory
+- Connectitity (access points to the system):
+  - Routers
+
+## Explain the relationship between scalability, elasticity and cost-efficiency
+
+- Scalability: Ability to increase capacity by consuming more resources
+- Elasticity: Degree of autonomously adapting capacity to the workload over time
+- Cost-efficiency: Measure of optimal versus the actual cost of resources
+
+## Explain how to build scalable software with agile
+
+1. Define user stories
+2. Scalability triage
+3. Extract business related scalability concerns
+
+- Result:
+  - Product backlog: User stories with scalability concerns
+  - Use this as reference for sprint backlog
+
+4. Sprint planning with DoD and expert evaluation
+5. Development with QA
+6. Scalabilit testing
+7. Sprint review
+
+## Explain the challenges of manual deployment
+
+- Missing dependencies/wrong versions
+- Wrong ports open in firewall
+- If not done regularly, steps of how to deploy can be lost
+
+## Explain how GitHub actions works
+
+- Define a pipeline file (.yml):
+  - Trigger: When the pipeline should be triggered
+  - Jobs: The different jobs the pipeline should execute
+  - Steps: The different steps each job has to do
+
+## Explain the essential ideas of using different types of machine learning approaches in software engineering practices
+
+- Supervies learning: Training data + desired outputs
+- Unsupervised learning: Training data
+- Reinforcement learning: Envorionment and reward criteria
+
+## Explain the challenges and best practices of software engineering for AI in development stage
+
+- Model requirement:
+  - Understand the domain
+  - Understand the state of the practice
+  - Understand needs
+  - Confirm assumptions
+- Feature engineering
+  - Selecting, manipulating and transforming raw data into features that can be used by a model
+- Model training
+- Model evaluation
+
+## Explain challenge of deploying AI-based systems
+
+- Scalability
+- Managing model updates
+- Maintaining security
+- Handling real-time data processing
+- Integrating with existing systems
+
+## Explain how to define system integrity level
+
+## Explain advantages and challenges of using simulation-based testing
+
+### Advantages
+
+- Safety: test scenarions that could be dangerous in real world
+- Cost-effective: reduces need for phsical prototypes and real world trials
+- Controlled environment: consistent and repeatable testing environment
+- Early detection: identify issues and bugs early in development process
+- Flexibility: enables testing of a wide range of conditions and edge cases
+
+### Challenges
+
+- Realism: lack of complexity and unpredicatbility of real world
+- Model accuracy: Need accurate models to ensure valid test results
+- Resource intensive: can require significant computational resources
+- Over-reliance: risk of relying too much on simulation results without sufficient real world testing
