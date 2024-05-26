@@ -243,9 +243,62 @@ BankA has a credit limit between \$4_000 to \$40_000.
   - Alpha: At developer, by internal staff, before release
   - Beta: At customer, before release to other customer
 
-## Explain different test prioritzation approaches
+## Explain different test prioritization approaches
 
-TODO:
+### Risk-Based
+
+- Prioritized based on the risk of failure and the impact of potential defect.s
+- High-risk and high-impact are tested first.
+
+### Requirement-Based
+
+- Ordered based on the importance and criticality of the requirements they verify.
+- Critical and core functionaolities are tested first.
+
+### Coverage-Based
+
+- Focuses on maximizing code coverage with the fewest tests.
+- Tests that cover the mode code paths or functionalities are implemented first.
+
+### History-Bases
+
+- Historical data on defect rates and previous test failures.
+
+### Priority Category-Based
+
+- Categorize tests into different priority levels (high, medium, low)
+
+### Time-Based
+
+- Tests that can be implemented quickly are prioritized.
+
+### Customer/User
+
+- Prioritize test based on customer feedback and usage patterns.
+- Most used and/or valued features are tested first.
+
+## Regression Testing
+
+### What is it?
+
+Verify that already tested features still works after system changes.
+
+### Why do we do it?
+
+Verify that the system is working properly in its new state.
+
+### When do we do it?
+
+Whenever there is a change in the code or the environment.
+
+### How do we do it?
+
+Rerun existing tests
+
+## Change impact analysis
+
+- Identidy the potential consequence of a change
+- Esitmate what needs to be modified to accomplish a change
 
 ## Explain regression test selection approaches
 
