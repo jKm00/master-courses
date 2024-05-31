@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="cookie">Get cookie</button>
+    <button id="request">Send request</button>
+    <form id="cookie-form" method="GET" action="http://localhost:3000/token">
+      <button type="submit">Get cookie</button>
+    </form>
+
+    <script defer>
+      //   document
+      //     .querySelector('#cookie-form')
+      //     .addEventListener('submit', async (event) => {
+      //       event.preventDefault();
+      //       const response = await fetch('http://localhost:3000/token', {
+      //         method: 'GET',
+      //         headers: {
+      //           'Content-Type': 'application/json',
+      //         },
+      //       });
+      //       const data = await response.json();
+      //       console.log(data);
+      //     });
+
+      document.querySelector('#request').addEventListener('click', async () => {
+        const response = await fetch('http://localhost:3000/test', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        const data = await response.json();
+        console.log(data);
+      });
+    </script>
+  </body>
+</html>
