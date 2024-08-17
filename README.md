@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/number_of_subjects-8-blue?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/number_of_subjects-11-blue?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/completed_subjects-8-blue?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/jKm00/master-courses?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/jKm00/master-courses?style=for-the-badge)
